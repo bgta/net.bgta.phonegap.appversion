@@ -3,14 +3,17 @@
 
 @synthesize callbackID;
 
--(void)getVersionNumber:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options
+-(void)getVersionNumber:(CDVInvokedUrlCommand*)command
 {
-    self.callbackID = [arguments pop];
+    self.callbackID = command.callbackId;
     NSString * appVersionString = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
-    CDVPluginResult* pluginResult = nil;
-    
-    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:appVersionString];
-    
-    [self.commandDelegate sendPluginResult:pluginResult callbackId:self.callbackID];
+	
+	[self successWithMessage: appVersionString toID: self.callbackID];    
+}
+-(void)successWithMessage:(NSString *)message toID:(NSString *)callbackID
+{
+    CDVPluginResult *commandResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:message];
+
+    [self writeJavascript:[commandResult toSuccessCallbackString:callbackID]];
 }
 @end

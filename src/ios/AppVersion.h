@@ -9,5 +9,5 @@
 @property(nonatomic,copy) NSString* callbackID;
 
 // Instance Method
--(void) getVersionNumber:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
+-(void) getVersionNumber:(CDVInvokedUrlCommand*)command;
 @end
