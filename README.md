@@ -8,7 +8,7 @@ Usage
 
 Add plugin to your project:
 
-    cordova plugin add https://github.com/rromerogar/net.bgta.phonegap.appversion.git
+    cordova plugin add https://github.com/bgta/net.bgta.phonegap.appversion.git
 
 Add the following to your config.xml to use version 1.0.0 of this plugin (recommended):
 
