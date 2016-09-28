@@ -1,5 +1,6 @@
 Phonegap AppVersion Plugin
 ============================
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/bgta/net.bgta.phonegap.appversion?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 PhoneGap 3 plugin to get Application Version.
 
