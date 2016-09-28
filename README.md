@@ -30,3 +30,5 @@ Get the Application Version on DeviceReady event:
         });
     }, false);
 ```
+
+See this example app: [testApp](https://mega.nz/#!DtAF3ZQD!c53as4j2jlHMlnsEsPHJlHsMMO2utbLClhg1iYifJ5U)
