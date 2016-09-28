@@ -20,8 +20,9 @@ You can install manually specifing an alternate URL:
 
     phonegap local plugin add https://github.com/bgta/net.bgta.phonegap.appversion.git
 
-Get the Application Version:
-
-    getAppVersion(function(version) {
-        console.log('Native App Version: ' + version);
-    });
+Get the Application Version on DeviceReady event:
+    document.addEventListener('deviceready', function onDeviceReady() {
+        getAppVersion(function(version) {
+            console.log('Native App Version: ' + version);
+        });
+    }, false);
