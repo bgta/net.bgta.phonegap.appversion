@@ -1,6 +1,5 @@
 #import <Foundation/Foundation.h>
 #import <Cordova/CDVPlugin.h>
-#import <Cordova/CDVPluginResult.h>
 #import <QuickLook/QuickLook.h>
 
 @interface AppVersion : CDVPlugin {
