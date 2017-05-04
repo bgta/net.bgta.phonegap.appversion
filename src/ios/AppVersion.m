@@ -13,8 +13,7 @@
 -(void)successWithMessage:(NSString *)message toID:(NSString *)callbackID
 {
     CDVPluginResult *commandResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:message];
-
-    // [self writeJavascript:[commandResult toSuccessCallbackString:callbackID]];
+    
     [self.commandDelegate sendPluginResult:commandResult callbackId:callbackID];
 }
 @end
